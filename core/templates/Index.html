@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+
+     {% load static %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<img src="{% static "images/main.jpg" %}" alt="My image"/ width="500" height="300">
+<head>
+    <title>Index</title>
+    <br>
+    <br>
+  <div class="alert alert-success">
+   
+  <h2>Add Customer Details</h2>
+</div>
+    <meta charset="UTF-8">
+
+
+</head>
+<body>
+<form method="POST" class="post-form" action="">
+        {% csrf_token %}
+    <div class="container">
+<br>
+ </div>
+<div class="form-group row">
+  <label class="col-sm-2 col-form-label">Customer Name:</label>
+  <div class="col-sm-4">
+    {{ user.username }}
+  </div>
+</div>
+    
+
+ 
+       <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Principal Amount:</label>
+    <div class="col-sm-4">
+      {{ form.ammount }}
+    </div>
+  </div>
+       <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Tenure of Loan:</label>
+    <div class="col-sm-4">
+      {{ form.tenure }}
+    </div>
+  </div>
+
+       <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Rate:</label>
+    <div class="col-sm-4">
+      {{ form.rate }}
+    </div>
+  </div>
+
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    </div>
+
+</form>
+
+</body>
+</html>
+</center>
